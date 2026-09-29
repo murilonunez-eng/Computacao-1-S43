@@ -1,0 +1,29 @@
+//exercicio 1 prova
+//Declaração das variáveis e seus tipos
+var cintura = real
+var altura = real
+var sapato = inteiro
+var indiceA = real
+var indiceB = real
+
+//Entrada de dados do usuário
+cintura = real(leia("Digite a medida da sua cintura em metros: "))
+escreva("Cintura: ${cintura}")
+altura = real(leia("Digite a medida da sua altura em metros: "))
+escreva("Altura: ${altura}")
+sapato = inteiro(leia("Digite o número do seu sapato: "))
+escreva("Sapato: ${sapato}")
+
+indiceA = cintura*(sapato - (altura*10))
+indiceB = (sapato+altura*10) - cintura*10
+
+escreva("Indice A: ${indiceA}")
+escreva("Indice B: ${indiceB}")
+
+se(indiceA>indiceB){
+    escreva("indice B é menor que indice A")
+} senao se(indiceA<indiceB){
+    escreva("indiceB é maior que indice A")
+} senao{
+    escreva("indiceB e indiceA são iguais")
+}
