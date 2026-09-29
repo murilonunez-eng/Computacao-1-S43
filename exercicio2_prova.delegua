@@ -1,0 +1,39 @@
+//exercicio 2 prova
+fixo n = 6
+var i = inteiro
+var nota1 = real
+var nota2 = real 
+var nota3 = real 
+var mediapon = real
+var chute = real
+var soma = real
+var media_das_medias = real 
+soma = 0
+chute = -1
+
+para(i=1; i<= n; i++){
+    escreva("${i}-")
+    nota1 = real(leia("Digite a primeira nota:"))
+    escreva("   ${nota1}")
+    nota2 = real(leia("Digite a segunda nota:"))
+    escreva("   ${nota2}")
+    nota3 = real(leia("Digite a terceira nota:"))
+    escreva("   ${nota3}")
+
+    mediapon = ((nota1 *4)+(nota2*6)+(nota3*3))/13
+    escreva("   Média ponderada: ${mediapon}")
+    soma = soma + mediapon
+}
+media_das_medias = arredondar(soma / n, 2)
+
+fazer { 
+    chute = real(leia("Qual é o valor da média das médias?"))
+    se(chute<media_das_medias){
+        escreva("Valor demais de baixo!")
+    }
+    se(chute>media_das_medias){
+        escreva("Valor demais de alto!")
+    }
+} enquanto(chute != media_das_medias)
+
+escreva("Parabéns, você é uma pessoa de extrema sorte!")
